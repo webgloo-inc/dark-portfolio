@@ -1,0 +1,775 @@
+:root {
+  --primary: #6e57e0;
+  --bg: #010101;
+  --first-color: #2e2e41;
+  --second-color: #5b85ff;
+  --third-color: #434354;
+  --text-fill-color: #fff;
+
+  --box-shadow: 0 5px 25px rgb(2, 2, 2, 0.1);
+  --text-shadow: 0 5px 25px rgba(168, 168, 168, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+section {
+  position: relative;
+  margin: 0;
+  transition: 0.5s ease;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: hsl(250, 28%, 12%);
+  color: rgb(0, 0, 0);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.6rem 7%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 999999;
+  mix-blend-mode: white;
+  background-color: hsl(250, 28%, 12%);
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700px;
+  color: white;
+  font-style: italic;
+}
+
+.navbar .navbar-nav a {
+  color: white;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1.6rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: white;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/* Hero Section */
+
+.hero .container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero img {
+  max-width: 470px;
+  margin-bottom: -9rem;
+}
+
+.hero .content {
+  padding: 5rem 10%;
+}
+
+.hero .content h1 {
+  font-size: 3.3em;
+  line-height: 1;
+  margin-left: 13rem;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.hero .content p {
+  font-size: 1.3rem;
+  margin-top: 1.2rem;
+  line-height: 2rem;
+  font-weight: 400;
+  margin-left: 13rem;
+  color: #a8a8a8;
+  align-items: center;
+  max-width: 35rem;
+  z-index: 999999;
+}
+
+.hero .content .button {
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: white;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  margin-left: 13rem;
+}
+
+.hero .content h3 {
+  margin-left: 13rem;
+  line-height: 3rem;
+  font-size: 1.8rem;
+  color: #777777;
+  font-weight: 400;
+}
+
+.hero .content .logos {
+  flex-direction: column;
+  display: flex;
+  gap: 2rem;
+  color: var(--primary);
+  margin-left: 2rem;
+  font-size: 1.3rem;
+}
+
+/* About Section */
+.about,
+.menu,
+.kontak {
+  padding: 8rem 7% 1.4rem;
+}
+
+.about {
+  min-height: 100vh;
+}
+.about h2,
+.kontak h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  margin-top: 5rem;
+  color: white;
+}
+
+.about .title p {
+  text-align: center;
+  margin-top: -3.3rem;
+  color: white;
+}
+
+.about .row {
+  display: flex;
+}
+
+.about .row .about-image {
+  flex: 1 1 45rem;
+}
+
+.about .row .about-image img {
+  min-width: 249px;
+  max-width: 250px;
+  border-radius: 5%;
+  margin-left: 17.5rem;
+  margin-top: 8rem;
+  margin-right: 4rem;
+}
+
+.about .row .content {
+  flex: 1 1 45rem;
+  padding: 0 1rem;
+  margin-top: 13rem;
+  margin-right: 20rem;
+  min-width: 40rem;
+  max-width: 50rem;
+}
+
+.about .row .content h1 {
+  margin-bottom: 2rem;
+  padding-top: 2rem;
+  font-size: 2.3rem;
+  color: white;
+  font-weight: 400;
+}
+
+.about .row .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: white;
+}
+
+.about .experience .number {
+  display: flex;
+  justify-content: center;
+  gap: 4.5rem;
+}
+
+.about .experience .number h2 {
+  font-size: 2.3rem;
+}
+
+.about .experience .explain {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 3.1rem;
+  margin-top: -2.8rem;
+  color: #bebebe;
+}
+
+.about .experience {
+  position: relative;
+  left: auto;
+  bottom: -1.5rem;
+}
+
+.about .button {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  color: white;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  margin-left: 0rem;
+}
+
+.about .button i {
+  position: relative;
+  left: 0.5rem;
+  font-size: 1.4rem;
+}
+/* Experience */
+.bg {
+  min-height: 80vh;
+  background-color: var(--primary);
+  margin-top: 10rem;
+}
+
+.bg .title {
+  text-align: center;
+  padding-top: 7rem;
+}
+
+.bg .title h2 {
+  font-size: 3rem;
+  color: white;
+}
+
+.bg .title p {
+  font-size: 1rem;
+  color: white;
+}
+
+.bg .card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  width: 300px;
+  max-width: 33rem;
+  min-width: 32rem;
+  max-height: 27rem;
+  min-height: 26rem;
+}
+
+.bg .experience-card {
+  display: flex;
+  justify-content: center;
+  margin-top: 6rem;
+  gap: 7rem;
+}
+
+.bg i {
+  font-size: 4rem;
+  margin-left: 1rem;
+  margin-top: 0rem;
+  padding-bottom: -0.5rem;
+}
+
+.bg .card-body {
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+.bg .card-body h5 {
+  font-size: 1.5rem;
+}
+
+.bg .card-body p {
+  margin-top: 1rem;
+}
+
+/* Media queries */
+
+/* laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+/* tablet */
+@media (max-width: 768px) {
+  #hamburger-menu {
+    display: inline-block;
+    color: var(--primary);
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: white;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .hero img {
+    max-width: 55%;
+    min-width: 340px;
+    display: block;
+    margin: auto;
+  }
+
+  .hero .container {
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    margin-left: 2rem;
+  }
+
+  .hero .container .logos {
+    position: relative;
+    left: -28rem;
+    bottom: 17rem;
+  }
+
+  .hero .container .paragraph {
+    display: block;
+    margin-left: -14rem;
+    margin-top: 1.3rem;
+    text-align: center;
+  }
+
+  .hero .content h3 {
+    line-height: 1.2rem;
+  }
+
+  .about .row .content {
+    text-align: center;
+    margin: auto;
+    position: relative;
+    top: -12rem;
+  }
+
+  .about .row .about-image img {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    position: relative;
+    top: 3rem;
+  }
+
+  .about .row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about .experience {
+    margin-top: -43rem;
+    justify-content: center;
+  }
+
+  .about .experience .explain {
+    font-weight: 400;
+    color: #010101;
+    font-size: 1rem;
+    margin-top: -2.7rem;
+  }
+
+  .about .row .content h3 {
+    font-size: 2rem;
+  }
+
+  .about .row .content p {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+  .about .row .about-image {
+    margin: 0;
+  }
+
+  .about .button {
+    margin-top: 13rem;
+  }
+  .menu p {
+    font-size: 1.2rem;
+  }
+
+  .bg .experience-card {
+    display: flex;
+    justify-content: center;
+    margin-top: 6rem;
+    gap: 3rem;
+    margin-top: 4rem;
+  }
+
+  .bg .experience-card .card {
+    max-width: 23rem;
+    min-width: 22rem;
+  }
+
+  .bg {
+    min-height: 70vh;
+    max-height: 75.1vh;
+    margin-top: 10rem;
+  }
+
+  .kotak .row {
+    display: flex;
+    max-width: fit-content;
+    gap: 5rem;
+    margin: auto;
+  }
+}
+
+/* mss */
+@media (max-width: 1450px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+/* handphone */
+@media (max-width: 480px) {
+  html {
+    font-size: 55%;
+  }
+
+  .hero {
+    margin-left: -2rem;
+    margin-top: -8rem;
+  }
+  .hero .container .paragraph {
+    display: block;
+    align-items: center;
+    margin-left: -15rem;
+  }
+  .hero .content h1 {
+    font-size: 3rem;
+    margin-top: 2rem;
+  }
+
+  .hero .content .button {
+    margin-top: 3rem;
+  }
+
+  .hero .content p {
+    font-size: 1.1rem;
+  }
+
+  .hero .content h3 {
+    line-height: 2rem;
+    margin-top: 0;
+    font-size: 1.8rem;
+  }
+  .hero img {
+    max-width: 55%;
+    display: block;
+    align-items: center;
+  }
+  .hero .content .logos {
+    display: none;
+  }
+
+  .about .button {
+    align-items: center;
+  }
+
+  .about .experience {
+    margin-top: -42rem;
+  }
+
+  .bg .experience-card {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 5rem;
+  }
+
+  .bg .experience-card .card {
+    max-width: 30rem;
+    min-width: 25rem;
+    margin: auto;
+  }
+
+  .bg {
+    max-height: 160vh;
+    min-height: 150vh;
+    margin-top: 20rem;
+  }
+
+  .bg .title {
+    padding-top: 5rem;
+  }
+
+  .gallery .card {
+    max-width: 20%;
+    min-width: 49%;
+    max-height: 50%;
+    min-height: 49%;
+  }
+
+  .kotak .row .row-right .list .call {
+    position: relative;
+    font-size: 1rem;
+    top: 0.3rem;
+    left: 2rem;
+    color: #bebebe;
+  }
+
+  .kotak .row .row-right .list {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .kotak .row .row-right {
+    display: flex;
+    font-size: 1rem;
+    margin-right: 4rem;
+    margin-left: 0;
+  }
+
+  .kotak .row .row-right .list {
+    margin: 0 1rem;
+  }
+
+  .kotak .row .row-right .list i {
+    position: relative;
+    left: 2rem;
+  }
+
+  .kotak .row .row-left .map {
+    margin: auto;
+    max-width: 30rem;
+  }
+
+  .kotak .row .row-left {
+    margin: auto;
+  }
+}
+
+/* Kontak section */
+.kontak .title {
+  text-align: center;
+}
+
+.kontak .title p {
+  margin-top: -3rem;
+  color: white;
+}
+
+.contact_container {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+  margin-bottom: 0;
+  max-width: 700px;
+  min-width: 300px;
+  max-height: 300px;
+  min-height: 300px;
+  padding-top: 7rem;
+}
+
+.kontak {
+  margin-bottom: 7rem;
+}
+
+.contact_part .row {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  text-align: center;
+  margin-top: 5rem;
+  margin-right: 1.3rem;
+  color: #777777;
+}
+
+.contact_part h3 {
+  color: white;
+  font-weight: 400;
+}
+
+.contact_part i {
+  font-size: 2.5rem;
+  color: var(--primary);
+  position: relative;
+  bottom: 1rem;
+}
+/* Footer */
+footer {
+  background-color: var(--primary);
+  text-align: center;
+  padding: 1rem 0 3rem;
+  margin-top: 3rem;
+}
+
+footer .socials {
+  padding: 1rem 0;
+}
+
+footer .socials a {
+  color: white;
+  margin: 1rem;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+  color: var(--bg);
+}
+
+footer .links a {
+  color: white;
+  padding: 1.7rem 1rem;
+}
+
+footer .links {
+  margin-bottom: 1.4rem;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+}
+
+footer .credit a {
+  color: var(--bg);
+  font-weight: 700;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Galery */
+.gallery .title {
+  text-align: center;
+  margin-top: 10rem;
+}
+
+.gallery .title h2 {
+  font-size: 3rem;
+  color: white;
+}
+
+.gallery .title p {
+  color: white;
+}
+
+.gallery .card {
+  width: 200px;
+  height: 300px;
+  border-radius: 7px;
+  margin: 0rem;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.gallery .gallery-content {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+.gallery .card img {
+  width: 200px;
+  height: 300px;
+}
+
+.gallery .gallery-content .card-ex {
+  height: 100px;
+  width: 200px;
+  padding: 1.3rem;
+  position: relative;
+  box-sizing: border-box;
+  background: #cccccc69;
+  bottom: 0px;
+  transition: 0.5s;
+}
+
+.gallery .card-ex p {
+  visibility: hidden;
+}
+
+.gallery .gallery-content .card:hover {
+  cursor: pointer;
+}
+
+.gallery .card:hover .card-ex {
+  bottom: 100px;
+  height: 100px;
+  background: #cccccc69;
+}
+
+.gallery .gallery-content .card:hover .card-ex p {
+  opacity: 1;
+  visibility: visible;
+}
+
+.gallery .gallery-content .card:hover img {
+  transform: scale(1.1) rotate(-3deg);
+  transition: 0.5s;
+}
